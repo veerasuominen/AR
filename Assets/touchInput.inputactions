@@ -26,17 +26,6 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "08e705e7-47d1-4a41-9fad-81680dde78df",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SingleTap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "One Modifier",
                     "id": "c8e1f12f-ba57-43b9-b4fb-3feaf47c6be5",
                     "path": "OneModifier",
@@ -50,7 +39,7 @@
                 {
                     "name": "modifier",
                     "id": "8f5b4575-a26a-4086-ae69-098eef6df4d9",
-                    "path": "<Touchscreen>/primaryTouch/indirectTouch",
+                    "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -7,8 +7,11 @@ using UnityEngine.XR.ARFoundation;
 
 public class touchInput : MonoBehaviour
 {
-    [SerializeField] private TMP_Text debugText;
-    [SerializeField] private ARCameraManager arCamera;
+    [SerializeField]
+    private TMP_Text debugText;
+
+    [SerializeField]
+    private ARCameraManager arCamera;
 
     public void SingleTap(InputAction.CallbackContext ctx)
     {
@@ -19,26 +22,26 @@ public class touchInput : MonoBehaviour
         }
     }
 
-    public void DoubleTap(InputAction.CallbackContext ctx)
-    {
-        if (ctx.phase == InputActionPhase.Performed)
-        {
-            debugText.text = "Change Camera";
+    //public void DoubleTap(InputAction.CallbackContext ctx)
+    //{
+    //    if (ctx.phase == InputActionPhase.Performed)
+    //    {
+    //        debugText.text = "Change Camera";
 
-            if (arCamera.currentFacingDirection == CameraFacingDirection.World)
-            {
-                GetComponent<ARRaycastManager>().enabled = false;
-                GetComponent<ARPlaneManager>().enabled = false;
-                GetComponent<ARFaceManager>().enabled = true;
-                arCamera.requestedFacingDirection = CameraFacingDirection.User;
-            }
-        }
-        if (arCamera.currentFacingDirection == CameraFacingDirection.World)
-        {
-            GetComponent<ARRaycastManager>().enabled = true;
-            GetComponent<ARPlaneManager>().enabled = true;
-            GetComponent<ARFaceManager>().enabled = false;
-            arCamera.requestedFacingDirection = CameraFacingDirection.World;
-        }
-    }
+    //        if (arCamera.currentFacingDirection == CameraFacingDirection.World)
+    //        {
+    //            GetComponent<ARRaycastManager>().enabled = false;
+    //            GetComponent<ARPlaneManager>().enabled = false;
+    //            GetComponent<ARFaceManager>().enabled = true;
+    //            arCamera.requestedFacingDirection = CameraFacingDirection.User;
+    //        }
+    //    }
+    //    if (arCamera.currentFacingDirection == CameraFacingDirection.World)
+    //    {
+    //        GetComponent<ARRaycastManager>().enabled = true;
+    //        GetComponent<ARPlaneManager>().enabled = true;
+    //        GetComponent<ARFaceManager>().enabled = false;
+    //        arCamera.requestedFacingDirection = CameraFacingDirection.World;
+    //    }
+    //}
 }
